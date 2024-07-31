@@ -1,0 +1,27 @@
+--- I wanted to find out the average maternity leave weeks for the companies.
+
+SELECT AVG(maternity_leave_weeks)
+FROM fortune_companies;
+
+
+---I wanted to create a query that showed me the values for Apple Inc where employee tenure equals 4.5.
+SELECT *
+FROM fortune_companies
+WHERE company_name = 'Apple Inc.' AND avg_employee_tenure = 4.5;
+
+-- I created a query to find out the company with more than 10 weeks of Healthcare benefits.
+
+SELECT COUNT (healthcare_benefits)
+FROM fortune_companies
+HAVING COUNT (healthcare_benefits) >=10;
+
+
+--- I wanted to find the revenue that was less and greater than 500.
+
+SELECT revenue,
+CASE
+WHEN revenue >500 THEN "The revenue is greater than 500"
+WHEN revenue =500 THEN "The revenue is equal to 500"
+ELSE "The revenue is less than 500"
+END
+FROM fortune_companies;
