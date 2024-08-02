@@ -1,4 +1,6 @@
-This project utilized data from the following Netflix dataset.
+#This project utilized data from the following Netflix dataset.
+
+# The project was written using the PostgreSQL dialect and utilized data from the following two Netflix datasets:
 
 CREATE TABLE netflix_titles_info
     ("show_id" varchar(5), "type" varchar(7), "title" varchar(58), "country" varchar(74), "date_added" timestamp, "release_year" int, "rating" varchar(5), "duration" varchar(9), "listed_in" varchar(74))
@@ -60,20 +62,20 @@ VALUES
     
 
 
---- I want to query how many movie titles are there in the database.
+#1.I want to query how many movie titles are there in the database.
 
 SELECT count(*)
 FROM "netflix_titles_info"
 WHERE type='Movie';
 
 
---- I want to list all the movies and tv shows in alphabetical order.
+#2. I want to list all the movies and tv shows in alphabetical order.
 
 SELECT title
 FROM "netflix_titles_info"
-ORDER BY title asc;
+ORDER BY title asc
 
---- I created a query to find out who is the Director for the movie The Starling?
+#3. I created a query to find out who is the Director for the movie The Starling?
 
 SELECT
 director
